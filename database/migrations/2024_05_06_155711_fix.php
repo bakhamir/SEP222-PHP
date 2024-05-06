@@ -8,19 +8,14 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *        Schema::table('students', function (Blueprint $table) {
+            $table->integer('school_id')->nullable();
+        });
      * @return void
      */
     public function up()
     {
-        Schema::create('schools', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('adress')->default('Алматы');
-            $table->integer('studentsCount')->nullable(true);
-            $table->timestamps();
-             
-        });
+        //
     }
 
     /**
@@ -30,6 +25,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schools');
+        //
     }
 };

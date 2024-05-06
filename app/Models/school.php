@@ -9,5 +9,7 @@ class school extends Model
 {
     use HasFactory;
     protected $fillable = ['name','adress' ];
-
+    public function students(){
+        return $this->hasMany(student::class);
+    }
 }
